@@ -1,9 +1,84 @@
 <html>
     <head>
+            <title>
+                <%= locals.title %>
+            </title>
+            <script src="https://kit.fontawesome.com/0691d296c8.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="/css/home.css">
+            <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Fjalla+One&family=Merriweather+Sans&display=swap" rel="stylesheet">
 
     </head>
 
     <body>
-        <h1>Rendered from ejs view</h1>
+        <h1 id="Heading">
+            <i class="fas fa-clipboard-list"></i>
+            <span class="todo">TO-DO</span>&nbsp;APP</h1>
+
+        <form action="/add-task" method="POST">
+            
+            <div id="description">
+            <input id="Des" type="text" name="task" placeholder="What do you need to do?">
+            </div>  
+                
+            <select name="category" id="dropdown">
+                <option value="Choose a Category">Choose a Category</option>
+            <option value="Home">Home</option>
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+            <option value="Personal">Personal</option>
+            </select>
+
+            <input id="calander" type="date" name="date" placeholder="Due Date">
+
+            <div id="button1">
+            <button id="add" type="submit"><i class="far fa-plus-square"></i>Add Task</button>
+            </div>  
+
+            
+        </form>
+
+        <div id="div">
+            <ul>
+                <% for(let i of todo_app){ %>
+                 <li class="task">
+                     <div class="details">
+                        <p><%= i.task %></p>
+                        <p><%= i.category%></p>
+                        <p><%= i.date%></p>
+                     </div>
+
+                     <div id="button2">
+
+                        <a href="/delete-contact/?id=<%= i._id %>">
+                        <button id="delete" type="submit"><i class="fas fa-trash-alt"></i>Delete</button> </a>
+            
+                        </div>
+
+                     <!-- <div id="">
+                         <a href="/delete-contact/?id=<%= i._id %>">
+                             <i class="fas fa-user-minus"></i>
+
+                         </a>
+                     </div> -->
+                 </li>
+                <% } %>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript" src="/js/home.js"></script>
     </body>
 </html>
