@@ -28,7 +28,7 @@ app.get('/' , function(req, res){
             return;
         }
 
-        return res.render('home', {title : 'My To-Do App', todo_app :  task});
+             return res.render('home', {title : 'My To-Do App', todo_app :  task});
 
 
 
@@ -45,14 +45,7 @@ app.get('/' , function(req, res){
 
 app.post('/add-task', function(req,res){
        console.log(req.body);
-    //    console.log(req.body.name);
-    //    console.log(req.body.phone);
-        
-        // contactList.push({
-        //     name: req.body.name,
-        //     phone:req.body.phone
-        
-        // });
+
         
         Task.create({
     
@@ -68,8 +61,8 @@ app.post('/add-task', function(req,res){
                 return;
             }
     
-            console.log('******************', newTask);
-            return res.redirect('back');
+                console.log('******************', newTask);
+                return res.redirect('back');
         });
         
     });
@@ -82,13 +75,7 @@ app.post('/add-task', function(req,res){
         // get the query from url
     
         let id = req.query.id;
-        // find the contact in the DB using id and delete
-    
-        // let contactIndex = contactList.findIndex(contact => contact.phone == phone);
-    
-        // if(contactIndex != -1){
-        //     contactList.splice(contactIndex, 1);
-        // }
+        // find the task in the DB using id and delete
     
         Task.findByIdAndDelete(id,function(err){
             if(err)

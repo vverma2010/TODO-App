@@ -12,26 +12,26 @@
     <body>
         <h1 id="Heading">
             <i class="fas fa-clipboard-list"></i>
-            <span class="todo">TO-DO</span>&nbsp;APP</h1>
-
+            <span class="todo">TO-DO</span>&nbsp;APP
+        </h1>
         <form action="/add-task" method="POST">
             
             <div id="description">
-            <input id="Des" type="text" name="task" placeholder="What do you need to do?">
+                <input id="Des" type="text" name="task" placeholder="What do you need to do?">
             </div>  
                 
             <select name="category" id="dropdown">
                 <option value="Choose a Category">Choose a Category</option>
-            <option value="Home">Home</option>
-            <option value="Work">Work</option>
-            <option value="School">School</option>
-            <option value="Personal">Personal</option>
+                <option value="Home">Home</option>
+                <option value="Work">Work</option>
+                <option value="School">School</option>
+                <option value="Personal">Personal</option>
             </select>
 
             <input id="calander" type="date" name="date" placeholder="Due Date">
 
             <div id="button1">
-            <button id="add" type="submit"><i class="far fa-plus-square"></i>Add Task</button>
+                 <button id="add" type="submit"><i class="far fa-plus-square"></i>Add Task</button>
             </div>  
 
             
@@ -53,13 +53,6 @@
                         <button id="delete" type="submit"><i class="fas fa-trash-alt"></i>Delete</button> </a>
             
                         </div>
-
-                     <!-- <div id="">
-                         <a href="/delete-contact/?id=<%= i._id %>">
-                             <i class="fas fa-user-minus"></i>
-
-                         </a>
-                     </div> -->
                  </li>
                 <% } %>
             </ul>

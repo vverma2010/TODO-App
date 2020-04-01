@@ -6,7 +6,6 @@ body{
     background-size: cover;
     height: 100%;
     background-position: center;
-    /* background-repeat: no-repeat; */
     background-size: cover;
 
 }
@@ -113,13 +112,7 @@ body{
     background-color: rgb(15, 78, 78);
 }
 
-/* #buttons
-{
-    margin-top: 10px;
-    margin: 0;
-    width: auto;
-    display: inline-block;
-} */
+
 
 #button1
 {
@@ -157,7 +150,6 @@ body{
 #button2
 {
     text-align: center;
-    /* display: inline-block; */
     width: 50%;
     margin-top: 20px;
 
